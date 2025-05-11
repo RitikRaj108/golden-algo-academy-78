@@ -1,0 +1,90 @@
+
+import { Avatar } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Linkedin, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const mentors = [
+  {
+    name: "Chandan Yadav",
+    image: "/lovable-uploads/0881841c-6118-4aed-bfab-3b55077adc0b.png",
+    profileLink: "https://www.linkedin.com/posts/chandan-kumar-a61029242_im-happy-to-share-that-im-starting-a-new-activity-7313876810356649984-Bddi",
+    role: "Trading Mentor"
+  },
+  {
+    name: "Ritick Ganrai",
+    image: "/lovable-uploads/19a5871f-dffe-48a1-b8c3-dd5a54611dc2.png",
+    profileLink: "https://www.linkedin.com/posts/ritick-ganrai-2b7745136_ashwaquant-trading-investment-activity-7304026529552896001-2xWb",
+    role: "Investment Specialist"
+  }
+];
+
+const MentorSection = () => {
+  return (
+    <section id="mentors" className="py-20 bg-gradient-to-b from-trading-blue to-[#141925]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Meet Our <span className="text-trading-gold">Mentors</span>
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Learn from industry professionals with proven track records in trading and investments
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {mentors.map((mentor, index) => (
+            <Card key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden hover:shadow-lg hover:shadow-trading-gold/20 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-4 relative">
+                    <Avatar className="w-32 h-32 border-2 border-trading-gold">
+                      <img
+                        src={mentor.image}
+                        alt={mentor.name}
+                        className="object-cover"
+                      />
+                    </Avatar>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-1">{mentor.name}</h3>
+                  <p className="text-trading-gold mb-4">{mentor.role}</p>
+                  <Button 
+                    variant="outline" 
+                    className="border-trading-gold text-trading-gold hover:bg-trading-gold/10"
+                    onClick={() => window.open(mentor.profileLink, "_blank")}
+                  >
+                    <Linkedin className="mr-2" size={18} />
+                    View Profile
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Button 
+              variant="default" 
+              className="bg-trading-gold hover:bg-trading-gold-light text-white"
+              onClick={() => window.open("https://www.linkedin.com/posts/ashwaquant-pvt-ltd_ashwaquant-stockmarketindia-futuresandoptions-activity-7316374093673459712-4HBb", "_blank")}
+            >
+              <Linkedin className="mr-2" size={18} />
+              Follow Us on LinkedIn
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-trading-gold text-trading-gold hover:bg-trading-gold/10"
+              onClick={() => window.open("https://youtube.com/@ashwaquant?si=u0gVA_KFc8meXOAm", "_blank")}
+            >
+              <ExternalLink className="mr-2" size={18} />
+              Visit Our YouTube Channel
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MentorSection;

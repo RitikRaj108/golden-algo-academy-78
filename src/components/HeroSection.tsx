@@ -5,7 +5,7 @@ import { TrendingUp, Users, Award } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative bg-trading-blue pt-28 pb-24 md:pt-32 md:pb-32">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1640340434855-6084b1f4901c?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
