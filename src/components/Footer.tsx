@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
 
@@ -21,7 +20,7 @@ const Footer = () => {
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/company/ashwaquant/" className="text-gray-300 hover:text-trading-gold transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/ashwaquant-pvt-ltd/posts/?feedView=all" className="text-gray-300 hover:text-trading-gold transition-colors" target="_blank" rel="noopener noreferrer">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="h-6 w-6" />
               </a>
