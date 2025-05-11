@@ -14,7 +14,7 @@ const CTASection = () => {
               </h2>
               
               <p className="text-gray-600 mb-8">
-                Join our exclusive algorithmic trading program and get access to professional-grade strategies that have helped thousands of traders achieve consistent profits. Limited spots available for our next cohort.
+                Join AshwaQuant's exclusive trading education program and get access to professional-grade strategies that have helped traders achieve consistent profits. Limited spots available for our next cohort.
               </p>
               
               <div className="mb-8">
@@ -26,15 +26,15 @@ const CTASection = () => {
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-trading-gold mr-2">✓</span>
-                    Lifetime access to our algorithmic trading course
+                    Stock, Futures & Options Education
                   </li>
                   <li className="flex items-start">
                     <span className="text-trading-gold mr-2">✓</span>
-                    6 ready-to-implement trading strategies
+                    Personalized Mentorship Program
                   </li>
                   <li className="flex items-start">
                     <span className="text-trading-gold mr-2">✓</span>
-                    Private community membership
+                    Algorithmic Trading Strategies
                   </li>
                   <li className="flex items-start">
                     <span className="text-trading-gold mr-2">✓</span>
@@ -45,6 +45,10 @@ const CTASection = () => {
                     Personal strategy review session
                   </li>
                 </ul>
+              </div>
+              
+              <div className="text-sm text-gray-500">
+                <p>Visit us at: 90 Feet Road, Vijay Nagar, Hanuman Nagar, opposite NBCC Tower, Kankarbagh, Patna, India 800026</p>
               </div>
             </div>
             

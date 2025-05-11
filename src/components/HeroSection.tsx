@@ -14,11 +14,11 @@ const HeroSection = () => {
           </span>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Master <span className="gradient-text">Algorithmic Trading</span> For Consistent Profits
+            <span className="gradient-text">Master the Markets</span>
           </h1>
           
           <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of successful traders who have transformed their trading approach with our professional algo-trading strategies and education program.
+            Stock, Futures & Options Education with personalized mentorship. Transform your trading approach with our professional algorithmic trading strategies.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -33,15 +33,15 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="flex items-center justify-center bg-white/5 backdrop-blur-sm p-4 rounded-lg">
               <TrendingUp className="text-trading-gold mr-3" size={24} />
-              <span className="text-white">High-Profit Strategies</span>
+              <span className="text-white">Stock Market Expertise</span>
             </div>
             <div className="flex items-center justify-center bg-white/5 backdrop-blur-sm p-4 rounded-lg">
               <Users className="text-trading-gold mr-3" size={24} />
-              <span className="text-white">Expert Community</span>
+              <span className="text-white">Personalized Mentorship</span>
             </div>
             <div className="flex items-center justify-center bg-white/5 backdrop-blur-sm p-4 rounded-lg">
               <Award className="text-trading-gold mr-3" size={24} />
-              <span className="text-white">Proven Results</span>
+              <span className="text-white">Algorithmic Trading</span>
             </div>
           </div>
         </div>
