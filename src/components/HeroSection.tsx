@@ -52,29 +52,29 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3" 
-              alt="Trading Chart" 
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3" 
+              alt="Trading Technology" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?ixlib=rb-4.0.3" 
-              alt="Bull Market" 
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3" 
+              alt="Trading Code" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3" 
-              alt="Stock Trading" 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3" 
+              alt="Trading Analytics" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3" 
-              alt="Financial Analysis" 
+              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3" 
+              alt="Algorithm Development" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>

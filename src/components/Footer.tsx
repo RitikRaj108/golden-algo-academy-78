@@ -1,5 +1,6 @@
+
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Youtube, Phone, MapPin, Smartphone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,10 +54,36 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Phone size={18} className="text-trading-gold flex-shrink-0" />
+                <span className="text-gray-300">+91 9801943648 / +91 9102546467</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={18} className="text-trading-gold flex-shrink-0 mt-1" />
+                <span className="text-gray-300">90 Feet Road, Vijay Nagar,<br/> Hanuman Nagar, opposite NBCC Tower,<br/> Kankarbagh, Patna, India 800026</span>
+              </li>
               <li className="text-gray-300">Email: support@ashwaquant.com</li>
-              <li className="text-gray-300">Forms: forms.gle/FHPJZ9ty9tboDYZTA</li>
-              <li className="text-gray-300">Address: 90 Feet Road, Vijay Nagar,<br/> Hanuman Nagar, opposite NBCC Tower,<br/> Kankarbagh, Patna, India 800026</li>
+              <li>
+                <a 
+                  href="https://www.google.com/maps/place/25%C2%B035'21.9%22N+85%C2%B010'05.0%22E/@25.589425,85.168061,17z/data=!4m4!3m3!8m2!3d25.589427!4d85.168041?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-2 block"
+                >
+                  <div className="rounded-md overflow-hidden border border-gray-700 hover:border-trading-gold transition-colors">
+                    <div className="bg-gray-800 p-2 text-sm text-gray-300">
+                      <MapPin size={14} className="inline-block mr-1 text-trading-gold" />
+                      View Location
+                    </div>
+                    <img 
+                      src="https://maps.googleapis.com/maps/api/staticmap?center=25.589427,85.168041&zoom=15&size=300x150&markers=color:gold|25.589427,85.168041&key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg" 
+                      alt="Office Location Map"
+                      className="w-full h-[100px] object-cover"
+                    />
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

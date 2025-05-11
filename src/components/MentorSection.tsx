@@ -1,22 +1,18 @@
 
 import { Avatar } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const mentors = [
   {
     name: "Chandan Yadav",
     image: "/lovable-uploads/0881841c-6118-4aed-bfab-3b55077adc0b.png",
-    profileLink: "https://www.linkedin.com/posts/chandan-kumar-a61029242_im-happy-to-share-that-im-starting-a-new-activity-7313876810356649984-Bddi",
-    instagramLink: "https://www.instagram.com/ashwa_quant/",
     role: "Trading Mentor"
   },
   {
     name: "Ritick Ganrai",
     image: "/lovable-uploads/78ac6591-10fe-48df-b9ad-742368c8da74.png",
-    profileLink: "https://www.linkedin.com/posts/ritick-ganrai-2b7745136_ashwaquant-trading-investment-activity-7304026529552896001-2xWb",
-    instagramLink: "https://www.instagram.com/ashwa_quant/",
     role: "Investment Specialist"
   }
 ];
@@ -50,26 +46,6 @@ const MentorSection = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{mentor.name}</h3>
                   <p className="text-trading-gold mb-4">{mentor.role}</p>
-                  <div className="flex gap-3">
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      className="border-trading-gold text-trading-gold hover:bg-trading-gold/10"
-                      onClick={() => window.open(mentor.profileLink, "_blank")}
-                    >
-                      <Linkedin size={18} />
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      className="border-trading-gold text-trading-gold hover:bg-trading-gold/10"
-                      onClick={() => window.open(mentor.instagramLink, "_blank")}
-                    >
-                      <Instagram size={18} />
-                      <span className="sr-only">Instagram</span>
-                    </Button>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -78,14 +54,6 @@ const MentorSection = () => {
 
         <div className="mt-12 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button 
-              variant="default" 
-              className="bg-trading-gold hover:bg-trading-gold-light text-white"
-              onClick={() => window.open("https://www.linkedin.com/posts/ashwaquant-pvt-ltd_ashwaquant-stockmarketindia-futuresandoptions-activity-7316374093673459712-4HBb", "_blank")}
-            >
-              <Linkedin className="mr-2" size={18} />
-              Follow Us on LinkedIn
-            </Button>
             <Button 
               variant="outline" 
               className="border-trading-gold text-trading-gold hover:bg-trading-gold/10"
