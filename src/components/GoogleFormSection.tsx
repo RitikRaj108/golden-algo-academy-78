@@ -32,7 +32,7 @@ const RegistrationSection = () => {
               { src: "/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png", title: "Classroom Sessions" },
               { src: "/lovable-uploads/85df4abc-58f8-4e19-986e-8da89b8df5a2.png", title: "Chart Analysis" },
               { src: "/lovable-uploads/777d3f54-b64f-4c97-a846-6a4280de94ac.png", title: "Market Study" },
-              { src: "/lovable-uploads/ae8f5a7b-20bd-4e8c-8696-f94fc274c89f.png", title: "Stock Trading" }
+              { src: "/lovable-uploads/8dff4736-9c05-4f2f-b69d-77b9b3e19b76.png", title: "Stock Trading" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -173,13 +173,14 @@ const RegistrationSection = () => {
             >
               <Card className="bg-white shadow-md hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
                 <CardContent className="p-0">
+                  {/* Office Front Image */}
                   <div className="overflow-hidden">
                     <AspectRatio ratio={16/9}>
                       <motion.img 
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.5 }}
-                        src="/lovable-uploads/6d7d3560-82c1-4e7f-be0c-cac14fb1d156.png" 
-                        alt="AshwaQuant Office"
+                        src="/lovable-uploads/e273fd98-db27-4f99-a355-ea13df0dddf8.png" 
+                        alt="AshwaQuant Office Front"
                         className="w-full h-full object-cover"
                       />
                     </AspectRatio>
@@ -190,8 +191,10 @@ const RegistrationSection = () => {
                     <p className="text-gray-600 mb-4">
                       Find us at our office in Patna:
                     </p>
+                    
+                    {/* Map Image */}
                     <motion.div 
-                      className="overflow-hidden rounded-md h-[200px] border border-gray-200"
+                      className="overflow-hidden rounded-md h-[200px] border border-gray-200 mb-4"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.5 }}
@@ -204,17 +207,33 @@ const RegistrationSection = () => {
                         className="block w-full h-full"
                       >
                         <img 
-                          src="https://maps.googleapis.com/maps/api/staticmap?center=25.589427,85.168041&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C25.589427,85.168041&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                          alt="AshwaQuant Office Location"
+                          src="/lovable-uploads/63df25c1-605e-4873-8782-b195bc8f6a4f.png"
+                          alt="AshwaQuant Office Location Map"
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
                       </a>
                     </motion.div>
+                    
+                    {/* Office Interior Image */}
+                    <motion.div 
+                      className="overflow-hidden rounded-md h-[200px] border border-gray-200 mb-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      <img 
+                        src="/lovable-uploads/6d7d3560-82c1-4e7f-be0c-cac14fb1d156.png"
+                        alt="AshwaQuant Office Interior"
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </motion.div>
+                    
                     <motion.div 
                       className="mt-3"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
                       viewport={{ once: true }}
                     >
                       <Button
