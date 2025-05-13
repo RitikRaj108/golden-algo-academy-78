@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import MentorSection from "@/components/MentorSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import GoogleFormSection from "@/components/GoogleFormSection";
 import FaqSection from "@/components/FaqSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -17,7 +16,6 @@ const Index = () => {
       <FeaturesSection />
       <MentorSection />
       <TestimonialsSection />
-      <GoogleFormSection />
       <FaqSection />
       <CTASection />
       <Footer />

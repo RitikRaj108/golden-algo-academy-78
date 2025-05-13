@@ -8,28 +8,28 @@ import {
 
 const faqs = [
   {
-    question: "Do I need programming experience to learn algorithmic trading?",
-    answer: "No, our program is designed for traders of all technical backgrounds. We provide user-friendly tools and platforms that allow you to implement algorithmic strategies without extensive programming knowledge. For those interested in coding, we also offer advanced modules."
-  },
-  {
-    question: "How much capital do I need to start trading with your strategies?",
-    answer: "Our strategies are scalable and can be implemented with various account sizes. We recommend starting with at least $5,000 for optimal results, but we have special modules for smaller accounts that focus on capital preservation and growth."
+    question: "Do you cover both fundamental and technical aspects of the equity market, including Futures and Options?",
+    answer: "Yes. Our program offers comprehensive coverage of the Indian equity market, including both fundamental and technical analysis. You'll learn how to evaluate companies, understand financial reports, analyze industry trends, and apply practical trading techniques. We also provide dedicated training in Futures and Options (F&O)—covering concepts like option Greeks, hedging strategies, option writing, and practical F&O trading setups to help you trade derivatives with confidence and precision."
   },
   {
     question: "How long does it take to see results from your program?",
-    answer: "Most of our students start seeing improvements in their trading within the first month. However, mastering algorithmic trading is a journey, and the most significant results typically come after 3-6 months of consistent application of our strategies."
+    answer: "Typically, 2–3 months. Most learners begin to see noticeable improvements in their trading discipline, strategy, and consistency within the first few months of applying the concepts taught in our program."
   },
   {
-    question: "What markets can I trade using your algorithmic strategies?",
-    answer: "Our strategies are applicable across various markets including forex, stocks, futures, and cryptocurrencies. We provide specialized modules for each market to address their unique characteristics."
+    question: "Do you provide access to Meta accounts and training on Forex and Crypto?",
+    answer: "Yes. We provide comprehensive training in Forex and Cryptocurrency trading. We'll also guide you on how to set up and use Meta accounts through platforms like FundingPips and Delta Exchange."
   },
   {
-    question: "Is there ongoing support after I complete the program?",
-    answer: "Absolutely! All our students receive lifetime access to our community forum where our instructors regularly provide updates and answer questions. We also offer premium ongoing mentorship options for traders who want continued guidance."
+    question: "Do you offer certification?",
+    answer: "Yes, we do. Upon completion, you'll receive a certification from AshwaQuant, and we'll also support you in preparing for and passing the NISM Research Analyst and Derivatives Analyst exams."
   },
   {
-    question: "What if the strategies don't work for me?",
-    answer: "We stand behind our education program with a 30-day money-back guarantee. If you follow our instructions and don't see improvement in your trading, we'll refund your investment. Additionally, our support team works closely with all students to ensure proper implementation."
+    question: "Do you assist with job placement in top equity firms?",
+    answer: "Yes. We help create and enhance your professional profiles on platforms like LinkedIn and Naukri, prepare you for interviews, and guide you through the NISM exams to improve your chances of placement in reputed equity research and trading firms."
+  },
+  {
+    question: "Do I need programming experience to use your algorithmic trading tools?",
+    answer: "No. Our algorithmic trading systems are designed to be user-friendly. You don't need any prior coding experience—just a willingness to learn and execute."
   }
 ];
 
