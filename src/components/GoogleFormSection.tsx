@@ -1,9 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Phone, MapPin, SparklesIcon } from "lucide-react";
+import { ExternalLink, Phone, MapPin } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import RegistrationForm from "@/components/RegistrationForm";
 import { motion } from "framer-motion";
 
 const RegistrationSection = () => {
@@ -18,57 +17,86 @@ const RegistrationSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-trading-gold">Registration</span> Form
+            <span className="text-trading-gold">Trading</span> Education
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Complete this quick form to begin your trading journey with our team of expert mentors.
+            Join our comprehensive trading program with expert mentors and practical trading sessions.
           </p>
         </motion.div>
         
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <Card className="overflow-hidden shadow-lg border-trading-gold/20">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-2">
-                  <div className="bg-trading-blue p-8 text-white flex flex-col justify-center">
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
-                      viewport={{ once: true }}
-                    >
-                      <h3 className="text-2xl font-bold mb-4">Join Our Trading Program</h3>
-                      <p className="mb-6">Take the first step toward mastering the markets with expert guidance.</p>
-                      
-                      <ul className="space-y-4">
-                        {["Personalized Mentorship", "Practical Market Strategies", "Live Trading Sessions", "Lifetime Access"].map((item, index) => (
-                          <motion.li 
-                            key={item} 
-                            className="flex items-center gap-2"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: 0.4 + (index * 0.1) }}
-                            viewport={{ once: true }}
-                          >
-                            <span className="text-trading-gold">✓</span> {item}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  </div>
-                  
-                  <div className="p-6 md:p-8">
-                    <RegistrationForm />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          {/* Training Images Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="overflow-hidden rounded-lg shadow-lg"
+            >
+              <img 
+                src="/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png" 
+                alt="Trading Training Session" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="p-4 bg-trading-blue text-white">
+                <h3 className="font-bold text-lg">Classroom Trading Sessions</h3>
+                <p className="text-sm text-gray-300">Learn technical analysis in our interactive sessions</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="overflow-hidden rounded-lg shadow-lg"
+            >
+              <img 
+                src="/lovable-uploads/85df4abc-58f8-4e19-986e-8da89b8df5a2.png" 
+                alt="Trading Chart Analysis" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="p-4 bg-trading-blue text-white">
+                <h3 className="font-bold text-lg">Hands-on Chart Analysis</h3>
+                <p className="text-sm text-gray-300">Master candlestick patterns and market indicators</p>
+              </div>
+            </motion.div>
+          </div>
+          
+          <div className="bg-trading-blue text-white p-8 rounded-lg shadow-lg mb-12">
+            <h3 className="text-2xl font-bold mb-4">What You'll Learn</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <ul className="space-y-3">
+                {["Stock Market Fundamentals", "Technical Analysis", "Options Trading Strategies", "Risk Management"].map((item, index) => (
+                  <motion.li 
+                    key={item} 
+                    className="flex items-center gap-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 + (index * 0.1) }}
+                    viewport={{ once: true }}
+                  >
+                    <span className="text-trading-gold">✓</span> {item}
+                  </motion.li>
+                ))}
+              </ul>
+              <ul className="space-y-3">
+                {["Algorithmic Trading Basics", "Market Psychology", "Trading Plan Development", "Portfolio Management"].map((item, index) => (
+                  <motion.li 
+                    key={item} 
+                    className="flex items-center gap-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 0.4 + (index * 0.1) }}
+                    viewport={{ once: true }}
+                  >
+                    <span className="text-trading-gold">✓</span> {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <motion.div
