@@ -45,7 +45,7 @@ const RegistrationSection = () => {
                 <img 
                   src={item.src} 
                   alt={item.title} 
-                  className="w-full h-32 md:h-36 object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-24 md:h-28 object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="p-2 bg-trading-blue text-white text-center text-sm">
                   {item.title}
@@ -154,8 +154,8 @@ const RegistrationSection = () => {
                   <div className="overflow-hidden">
                     <AspectRatio ratio={16/9}>
                       <img 
-                        src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZmaWNlJTIwYnVpbGRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" 
-                        alt="Our Office"
+                        src="/lovable-uploads/77becf6f-1994-4758-9f66-6a7c1e8b67bc.png" 
+                        alt="AshwaQuant Office"
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </AspectRatio>
@@ -180,8 +180,8 @@ const RegistrationSection = () => {
                         className="block w-full h-full"
                       >
                         <img 
-                          src="https://maps.googleapis.com/maps/api/staticmap?center=25.589427,85.168041&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C25.589427,85.168041&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                          alt="Google Maps Location"
+                          src="/lovable-uploads/77becf6f-1994-4758-9f66-6a7c1e8b67bc.png"
+                          alt="AshwaQuant Office Location"
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
                       </a>

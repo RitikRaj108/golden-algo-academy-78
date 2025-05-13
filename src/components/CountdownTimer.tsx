@@ -8,42 +8,33 @@ type TimeLeft = {
   seconds: number;
 };
 
-const calculateTimeLeft = (): TimeLeft => {
-  // Set end date to 7 days from now for demo purposes
-  const endDate = new Date();
-  endDate.setDate(endDate.getDate() + 7);
-  
-  const difference = endDate.getTime() - new Date().getTime();
-  
-  let timeLeft: TimeLeft = {
-    days: 0,
+const CountdownTimer = () => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 7,
     hours: 0,
     minutes: 0,
-    seconds: 0,
-  };
-
-  if (difference > 0) {
-    timeLeft = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
-    };
-  }
-
-  return timeLeft;
-};
-
-const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+    seconds: 0
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(prevTime => ({
+        ...prevTime,
+        seconds: (prevTime.seconds > 0) ? prevTime.seconds - 1 : 59,
+        minutes: (prevTime.seconds === 0) 
+          ? ((prevTime.minutes > 0) ? prevTime.minutes - 1 : prevTime.minutes) 
+          : prevTime.minutes,
+        hours: (prevTime.seconds === 0 && prevTime.minutes === 0) 
+          ? ((prevTime.hours > 0) ? prevTime.hours - 1 : prevTime.hours) 
+          : prevTime.hours,
+        days: (prevTime.seconds === 0 && prevTime.minutes === 0 && prevTime.hours === 0) 
+          ? ((prevTime.days > 0) ? prevTime.days - 1 : prevTime.days) 
+          : prevTime.days
+      }));
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, [timeLeft]);
 
   const padWithZero = (num: number): string => {
     return num.toString().padStart(2, '0');
