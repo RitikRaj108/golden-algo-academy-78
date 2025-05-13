@@ -25,7 +25,7 @@ const RegistrationForm = () => {
     setFormData((prev) => ({ ...prev, agreeToTerms: checked }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.experience || !formData.agreeToTerms) {
@@ -39,21 +39,49 @@ const RegistrationForm = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Use EmailJS or a similar service to send the email
+      const response = await fetch("https://formsubmit.co/ritickrg1997@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          experience: formData.experience,
+          message: `New registration from ${formData.name}`,
+          _subject: "New Trading Program Registration",
+        }),
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Registration Successful!",
+          description: "We've received your registration. Check your email for next steps.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          experience: "",
+          agreeToTerms: false
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
       toast({
-        title: "Registration Successful!",
-        description: "We've received your registration. Check your email for next steps.",
+        title: "Submission Error",
+        description: "There was a problem submitting your form. Please try again.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        experience: "",
-        agreeToTerms: false
-      });
-    }, 1500);
+    }
   };
 
   return (
