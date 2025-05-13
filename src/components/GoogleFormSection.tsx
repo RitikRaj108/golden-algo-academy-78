@@ -113,19 +113,35 @@ const RegistrationSection = () => {
                 <CardContent className="p-0">
                   <div className="overflow-hidden">
                     <AspectRatio ratio={16/9}>
-                      <img 
+                      <motion.img 
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.5 }}
                         src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29udGFjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" 
                         alt="Contact Us"
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-full object-cover"
                       />
                     </AspectRatio>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="font-bold text-xl mb-3 text-trading-blue">Contact Us</h3>
-                    <p className="text-gray-600 mb-4">
+                    <motion.h3 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.3 }}
+                      viewport={{ once: true }}
+                      className="font-bold text-xl mb-3 text-trading-blue"
+                    >
+                      Contact Us
+                    </motion.h3>
+                    <motion.p 
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.4 }}
+                      viewport={{ once: true }}
+                      className="text-gray-600 mb-4"
+                    >
                       Have questions? Reach out to our team directly:
-                    </p>
+                    </motion.p>
                     <motion.div 
                       className="space-y-2 text-gray-700"
                       initial={{ opacity: 0, y: 20 }}
@@ -133,10 +149,16 @@ const RegistrationSection = () => {
                       transition={{ duration: 0.5, delay: 0.4 }}
                       viewport={{ once: true }}
                     >
-                      <div className="flex items-center gap-2">
+                      <motion.div 
+                        className="flex items-center gap-2"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: 0.5 }}
+                        viewport={{ once: true }}
+                      >
                         <Phone size={18} className="text-trading-gold flex-shrink-0" />
                         <p className="font-medium">+91 9801943648 / +91 9102546467</p>
-                      </div>
+                      </motion.div>
                     </motion.div>
                   </div>
                 </CardContent>
@@ -153,10 +175,12 @@ const RegistrationSection = () => {
                 <CardContent className="p-0">
                   <div className="overflow-hidden">
                     <AspectRatio ratio={16/9}>
-                      <img 
+                      <motion.img 
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.5 }}
                         src="/lovable-uploads/77becf6f-1994-4758-9f66-6a7c1e8b67bc.png" 
                         alt="AshwaQuant Office"
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-full object-cover"
                       />
                     </AspectRatio>
                   </div>
@@ -180,7 +204,7 @@ const RegistrationSection = () => {
                         className="block w-full h-full"
                       >
                         <img 
-                          src="/lovable-uploads/77becf6f-1994-4758-9f66-6a7c1e8b67bc.png"
+                          src="https://maps.googleapis.com/maps/api/staticmap?center=25.589427,85.168041&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C25.589427,85.168041&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                           alt="AshwaQuant Office Location"
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
