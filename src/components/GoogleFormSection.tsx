@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Phone, MapPin } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { motion } from "framer-motion";
+import RegistrationForm from "./RegistrationForm";
 
 const RegistrationSection = () => {
   return (
@@ -25,42 +26,45 @@ const RegistrationSection = () => {
         </motion.div>
         
         <div className="max-w-5xl mx-auto">
-          {/* Training Images Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* Training Images Section - MADE SMALLER */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { src: "/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png", title: "Classroom Sessions" },
+              { src: "/lovable-uploads/85df4abc-58f8-4e19-986e-8da89b8df5a2.png", title: "Chart Analysis" },
+              { src: "/lovable-uploads/777d3f54-b64f-4c97-a846-6a4280de94ac.png", title: "Market Study" },
+              { src: "/lovable-uploads/ae8f5a7b-20bd-4e8c-8696-f94fc274c89f.png", title: "Stock Trading" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                className="overflow-hidden rounded-lg shadow-md"
+              >
+                <img 
+                  src={item.src} 
+                  alt={item.title} 
+                  className="w-full h-32 md:h-36 object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="p-2 bg-trading-blue text-white text-center text-sm">
+                  {item.title}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Registration Form Section */}
+          <div className="mb-16">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="overflow-hidden rounded-lg shadow-lg"
+              className="bg-white rounded-lg shadow-lg p-6 md:p-8 border border-gray-100"
             >
-              <img 
-                src="/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png" 
-                alt="Trading Training Session" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
-              <div className="p-4 bg-trading-blue text-white">
-                <h3 className="font-bold text-lg">Classroom Trading Sessions</h3>
-                <p className="text-sm text-gray-300">Learn technical analysis in our interactive sessions</p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="overflow-hidden rounded-lg shadow-lg"
-            >
-              <img 
-                src="/lovable-uploads/85df4abc-58f8-4e19-986e-8da89b8df5a2.png" 
-                alt="Trading Chart Analysis" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
-              <div className="p-4 bg-trading-blue text-white">
-                <h3 className="font-bold text-lg">Hands-on Chart Analysis</h3>
-                <p className="text-sm text-gray-300">Master candlestick patterns and market indicators</p>
-              </div>
+              <h3 className="text-2xl font-bold mb-6 text-center text-trading-blue">Register for Trading Classes</h3>
+              <RegistrationForm />
             </motion.div>
           </div>
           
