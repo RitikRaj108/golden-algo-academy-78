@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FaqSection from "@/components/FaqSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import RegistrationSection from "@/components/GoogleFormSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <MentorSection />
       <TestimonialsSection />
       <FaqSection />
+      <RegistrationSection />
       <CTASection />
       <Footer />
     </div>

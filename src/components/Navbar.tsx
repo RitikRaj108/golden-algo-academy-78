@@ -15,6 +15,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToRegistration = () => {
+    const registrationSection = document.getElementById('registration');
+    if (registrationSection) {
+      registrationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-trading-blue/95 shadow-lg backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4">
@@ -45,7 +53,11 @@ const Navbar = () => {
           </nav>
           
           <div className="hidden md:block">
-            <Button variant="default" className="bg-trading-gold hover:bg-trading-gold-light text-white">
+            <Button 
+              variant="default" 
+              className="bg-trading-gold hover:bg-trading-gold-light text-white transition-transform hover:scale-105"
+              onClick={scrollToRegistration}
+            >
               Register Now
             </Button>
           </div>
@@ -74,7 +86,11 @@ const Navbar = () => {
                   {item}
                 </a>
               ))}
-              <Button variant="default" className="bg-trading-gold hover:bg-trading-gold-light text-white mt-2 w-full">
+              <Button 
+                variant="default" 
+                className="bg-trading-gold hover:bg-trading-gold-light text-white mt-2 w-full"
+                onClick={scrollToRegistration}
+              >
                 Register Now
               </Button>
             </nav>
