@@ -19,7 +19,7 @@ const LandingAnimation: React.FC<LandingAnimationProps> = ({ onComplete }) => {
     return () => clearTimeout(timer);
   }, [onComplete]);
 
-  // Horse running animation variants
+  // Horse animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -39,20 +39,20 @@ const LandingAnimation: React.FC<LandingAnimationProps> = ({ onComplete }) => {
   };
   
   const horseVariants = {
-    hidden: { x: -100, opacity: 0 },
+    hidden: { scale: 0.8, opacity: 0 },
     visible: { 
-      x: 0, 
+      scale: 1, 
       opacity: 1,
       transition: { 
         duration: 0.7
       }
     },
-    run: {
-      x: "calc(100vw + 300px)",
+    zoom: {
+      scale: [1, 1.1, 0.95, 1.05, 1],
       transition: {
         duration: 2,
+        times: [0, 0.25, 0.5, 0.75, 1],
         ease: "easeInOut",
-        delay: 0.5
       }
     },
     exit: {
@@ -93,12 +93,12 @@ const LandingAnimation: React.FC<LandingAnimationProps> = ({ onComplete }) => {
               className="relative w-[300px]"
               variants={horseVariants}
               initial="hidden"
-              animate={["visible", "run"]}
+              animate={["visible", "zoom"]}
               exit="exit"
             >
               <img 
-                src="/lovable-uploads/e89aa260-25d4-41cb-8353-fa0505594612.png" 
-                alt="Running Horse"
+                src="/lovable-uploads/53391256-dd11-4a60-bbe7-5a59d162eaed.png" 
+                alt="AshwaQuant Horse Logo"
                 className="w-full"
               />
             </motion.div>

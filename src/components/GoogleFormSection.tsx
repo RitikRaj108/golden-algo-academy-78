@@ -26,7 +26,7 @@ const RegistrationSection = () => {
         </motion.div>
         
         <div className="max-w-5xl mx-auto">
-          {/* Training Images Section - MADE SMALLER */}
+          {/* Training Images Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { src: "/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png", title: "Classroom Sessions" },
@@ -214,7 +214,7 @@ const RegistrationSection = () => {
                       </a>
                     </motion.div>
                     
-                    {/* Office Interior Image */}
+                    {/* Office Interior Image - Replaced with new image */}
                     <motion.div 
                       className="overflow-hidden rounded-md h-[200px] border border-gray-200 mb-4"
                       initial={{ opacity: 0, y: 20 }}
@@ -223,8 +223,8 @@ const RegistrationSection = () => {
                       viewport={{ once: true }}
                     >
                       <img 
-                        src="/lovable-uploads/6d7d3560-82c1-4e7f-be0c-cac14fb1d156.png"
-                        alt="AshwaQuant Office Interior"
+                        src="/lovable-uploads/53391256-dd11-4a60-bbe7-5a59d162eaed.png"
+                        alt="AshwaQuant Logo"
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </motion.div>
