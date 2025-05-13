@@ -214,21 +214,6 @@ const RegistrationSection = () => {
                       </a>
                     </motion.div>
                     
-                    {/* Office Interior Image - Replaced with new image */}
-                    <motion.div 
-                      className="overflow-hidden rounded-md h-[200px] border border-gray-200 mb-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
-                      viewport={{ once: true }}
-                    >
-                      <img 
-                        src="/lovable-uploads/53391256-dd11-4a60-bbe7-5a59d162eaed.png"
-                        alt="AshwaQuant Logo"
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                      />
-                    </motion.div>
-                    
                     <motion.div 
                       className="mt-3"
                       initial={{ opacity: 0, y: 20 }}
