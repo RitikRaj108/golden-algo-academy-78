@@ -20,8 +20,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-white">
-              <span className="text-trading-gold">Ashwa</span>Quant
+            <a href="/" className="flex items-center gap-3">
+              <img 
+                src="/lovable-uploads/957721ef-3257-492f-b3d6-5bfa5a1357b2.png" 
+                alt="AshwaQuant Logo" 
+                className="h-10 w-auto"
+              />
+              <span className="text-2xl font-bold text-white hidden sm:inline-block">
+                <span className="text-trading-gold">Ashwa</span>Quant
+              </span>
             </a>
           </div>
           
