@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            {["Features", "Testimonials", "Pricing", "FAQ"].map((item) => (
+            {["Features", "Testimonials"].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`} 
@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="md:hidden bg-trading-blue/95 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              {["Features", "Testimonials", "Pricing", "FAQ"].map((item) => (
+              {["Features", "Testimonials"].map((item) => (
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`} 

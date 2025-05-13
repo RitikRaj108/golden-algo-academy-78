@@ -9,10 +9,6 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="bg-trading-gold/20 text-trading-gold px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
-            Registration Closes Soon
-          </span>
-          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="gradient-text">Master the Markets</span>
           </h1>
@@ -24,9 +20,6 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button className="bg-trading-gold hover:bg-trading-gold-light text-white px-8 py-6 text-lg font-medium animate-pulse-glow">
               Start Your Trading Journey
-            </Button>
-            <Button variant="outline" className="border-trading-gold text-trading-gold hover:bg-trading-gold/10 px-8 py-6 text-lg font-medium">
-              Watch Demo
             </Button>
           </div>
           
@@ -52,29 +45,29 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3" 
-              alt="Trading Technology" 
+              src="/lovable-uploads/777d3f54-b64f-4c97-a846-6a4280de94ac.png" 
+              alt="Trading Mentors" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3" 
-              alt="Trading Code" 
+              src="/lovable-uploads/ae8f5a7b-20bd-4e8c-8696-f94fc274c89f.png" 
+              alt="Trading Classroom" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3" 
-              alt="Trading Analytics" 
+              src="/lovable-uploads/2e7e53af-f626-4036-a1d9-a005894b8ad2.png" 
+              alt="Trading Students" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
           <div className="overflow-hidden rounded-lg h-40 md:h-64">
             <img 
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3" 
-              alt="Algorithm Development" 
+              src="/lovable-uploads/e89aa260-25d4-41cb-8353-fa0505594612.png" 
+              alt="Trading Training" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>

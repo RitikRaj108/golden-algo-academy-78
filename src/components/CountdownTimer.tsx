@@ -52,7 +52,7 @@ const CountdownTimer = () => {
   return (
     <div className="w-full">
       <h3 className="text-xl md:text-2xl font-bold text-center mb-6">
-        Registration Closing In:
+        Limited Spots Available:
       </h3>
       
       <div className="flex justify-center gap-4 md:gap-6">
