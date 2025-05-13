@@ -97,7 +97,7 @@ const LandingAnimation: React.FC<LandingAnimationProps> = ({ onComplete }) => {
               exit="exit"
             >
               <img 
-                src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Outline_Color-04-512.png" 
+                src="/lovable-uploads/e89aa260-25d4-41cb-8353-fa0505594612.png" 
                 alt="Running Horse"
                 className="w-full"
               />

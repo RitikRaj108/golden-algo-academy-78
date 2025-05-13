@@ -8,12 +8,12 @@ const mentors = [
   {
     name: "Chandan Yadav",
     image: "/lovable-uploads/0881841c-6118-4aed-bfab-3b55077adc0b.png",
-    role: "Trading Mentor"
+    role: "Certified NISM VIII Derivative Analyst"
   },
   {
     name: "Ritick Ganrai",
     image: "/lovable-uploads/78ac6591-10fe-48df-b9ad-742368c8da74.png",
-    role: "Investment Specialist"
+    role: "Certified NISM XV Research Analyst"
   }
 ];
 

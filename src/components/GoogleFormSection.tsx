@@ -178,7 +178,7 @@ const RegistrationSection = () => {
                       <motion.img 
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.5 }}
-                        src="/lovable-uploads/77becf6f-1994-4758-9f66-6a7c1e8b67bc.png" 
+                        src="/lovable-uploads/6d7d3560-82c1-4e7f-be0c-cac14fb1d156.png" 
                         alt="AshwaQuant Office"
                         className="w-full h-full object-cover"
                       />
