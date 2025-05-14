@@ -1,5 +1,4 @@
 
-import CountdownTimer from './CountdownTimer';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -35,10 +34,6 @@ const CTASection = () => {
             >
               Join AshwaQuant's exclusive trading education program and get access to professional-grade strategies that have helped traders achieve consistent profits. Limited spots available for our next cohort.
             </motion.p>
-            
-            <div className="max-w-md mx-auto mb-10">
-              <CountdownTimer />
-            </div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}

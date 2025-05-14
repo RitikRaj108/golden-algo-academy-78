@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Play, Clock, User } from "lucide-react";
+import { Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +21,7 @@ const ZoomMeeting: React.FC<ZoomMeetingProps> = ({
   host,
 }) => {
   return (
-    <Card className="overflow-hidden border-0 shadow-lg">
+    <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
       <div className="relative">
         <div className="aspect-video w-full overflow-hidden">
           <img 
@@ -29,14 +29,8 @@ const ZoomMeeting: React.FC<ZoomMeetingProps> = ({
             alt={`${title} meeting thumbnail`} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-[1px]">
-            <motion.div
-              className="rounded-full bg-white/20 p-4 backdrop-blur-sm"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Play className="h-12 w-12 text-white" fill="white" />
-            </motion.div>
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center backdrop-blur-[1px]">
+            {/* Play button removed as requested */}
           </div>
         </div>
       </div>
@@ -61,10 +55,9 @@ const ZoomMeeting: React.FC<ZoomMeetingProps> = ({
         </div>
         
         <Button 
-          className="w-full text-lg py-6 mt-2 bg-trading-gold hover:bg-trading-gold-light gap-2"
+          className="w-full text-lg py-6 mt-2 bg-trading-gold hover:bg-trading-gold-light"
           onClick={() => window.open(meetingUrl, "_blank")}
         >
-          <Play className="h-5 w-5" />
           Join Workshop
         </Button>
       </CardContent>
