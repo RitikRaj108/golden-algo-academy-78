@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Phone, MapPin } from "lucide-react";
@@ -32,7 +31,7 @@ const RegistrationSection = () => {
               { src: "/lovable-uploads/74bb6e04-e084-4593-beed-82c0a69ca4ea.png", title: "Classroom Sessions" },
               { src: "/lovable-uploads/85df4abc-58f8-4e19-986e-8da89b8df5a2.png", title: "Chart Analysis" },
               { src: "/lovable-uploads/777d3f54-b64f-4c97-a846-6a4280de94ac.png", title: "Market Study" },
-              { src: "/lovable-uploads/ae8f5a7b-20bd-4e8c-8696-f94fc274c89f.png", title: "Stock Trading" }
+              { src: "/lovable-uploads/77e5997e-371e-438d-8c2f-649f5c4e2482.png", title: "Algo Trading" }
             ].map((item, index) => (
               <motion.div
                 key={index}
