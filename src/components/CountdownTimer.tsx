@@ -17,24 +17,32 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(prevTime => ({
-        ...prevTime,
-        seconds: (prevTime.seconds > 0) ? prevTime.seconds - 1 : 59,
-        minutes: (prevTime.seconds === 0) 
-          ? ((prevTime.minutes > 0) ? prevTime.minutes - 1 : prevTime.minutes) 
-          : prevTime.minutes,
-        hours: (prevTime.seconds === 0 && prevTime.minutes === 0) 
-          ? ((prevTime.hours > 0) ? prevTime.hours - 1 : prevTime.hours) 
-          : prevTime.hours,
-        days: (prevTime.seconds === 0 && prevTime.minutes === 0 && prevTime.hours === 0) 
-          ? ((prevTime.days > 0) ? prevTime.days - 1 : prevTime.days) 
-          : prevTime.days
-      }));
-    }, 1000);
+    const calculateTimeLeft = () => {
+      // Set a fixed target date 7 days from initial load
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 7);
+      
+      const difference = targetDate.getTime() - new Date().getTime();
+      
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        
+        setTimeLeft({ days, hours, minutes, seconds });
+      }
+    };
 
-    return () => clearTimeout(timer);
-  }, [timeLeft]);
+    // Calculate immediately on component mount
+    calculateTimeLeft();
+    
+    // Set interval to update every second
+    const timer = setInterval(calculateTimeLeft, 1000);
+    
+    // Clear interval on component unmount
+    return () => clearInterval(timer);
+  }, []);
 
   const padWithZero = (num: number): string => {
     return num.toString().padStart(2, '0');
